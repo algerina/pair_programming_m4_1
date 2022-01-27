@@ -1,48 +1,59 @@
-# curriculum-databases-projects-template
+# Pair programming Drawing Book challenge
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+A teacher asks the class to open their books to a page number. A student can either start turning pages from the front of the book or from the back of the book. They always turn pages one at a time. When they open the book, page  is always on the right side:
 
+When they flip page , they see pages  and . Each page except the last page will always be printed on both sides. The last page may only be printed on the front, given the length of the book. If the book is  pages long, and a student wants to turn to page , what is the minimum number of pages to turn? They can start at the beginning or the end of the book.
 
-## Getting Started
+Given  and , find and print the minimum number of pages that must be turned in order to arrive at page .
 
-This repository includes files with plain SQL that can be used to recreate a database:
+Exampme
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+ If the student wants to get to page , they open the book to page , flip  page and they are on the correct page. If they open the book to the last page, page , they turn  page and are at the correct page. Return .
 
+Function Description
 
-## Authors
+Complete the pageCount function in the editor below.
 
-👤 **Author1**
+pageCount has the following parameter(s):
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+int n: the number of pages in the book
+int p: the page number to turn to
+Returns
 
-👤 **Author2**
+int: the minimum number of pages to turn
+Input Format
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+The first line contains an integer , the number of pages in the book.
+The second line contains an integer, , the page to turn to.
 
-## 🤝 Contributing
+Constraints
 
-Contributions, issues, and feature requests are welcome!
+Sample Input 0
 
-Feel free to check the [issues page](../../issues/).
+6
+2
+Sample Output 0
 
-## Show your support
+1
+Explanation 0
 
-Give a ⭐️ if you like this project!
+If the student starts turning from page , they only need to turn  page
 
-## Acknowledgments
+If a student starts turning from page , they need to turn  pages
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Return the minimum value, .
 
-## 📝 License
+Sample Input 1
 
-This project is [MIT](./MIT.md) licensed.
+5
+4
+Sample Output 1
+
+0
+Explanation 1
+
+If the student starts turning from page , they need to turn  pages
+
+If they start turning from page , they do not need to turn any pages
+
+Return the minimum value, .
