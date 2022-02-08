@@ -1,9 +1,10 @@
-function pageCount(n, p) {
+function miniMaxSum(arr) {
     // Write your code here
-    let frontCount = Math.floor(p/2);
-    let totalCount = Math.floor(n/2);
-    let backCount = Math.floor(totalCount - frontCount);
     
-    return Math.min(frontCount, backCount);
+     let x = arr.sort();
+    
+    let sum = x.reduce((partialSum, a) => partialSum + a, 0);
+    
+console.log(sum-arr[4], sum-arr[0]);
 
 }
