@@ -1,59 +1,91 @@
-# Pair programming Drawing Book challenge
+# Pair programming Min-Max Sum
 
-A teacher asks the class to open their books to a page number. A student can either start turning pages from the front of the book or from the back of the book. They always turn pages one at a time. When they open the book, page  is always on the right side:
+Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 
-When they flip page , they see pages  and . Each page except the last page will always be printed on both sides. The last page may only be printed on the front, given the length of the book. If the book is  pages long, and a student wants to turn to page , what is the minimum number of pages to turn? They can start at the beginning or the end of the book.
+Example
 
-Given  and , find and print the minimum number of pages that must be turned in order to arrive at page .
+The minimum sum is  and the maximum sum is . The function prints
 
-Exampme
-
- If the student wants to get to page , they open the book to page , flip  page and they are on the correct page. If they open the book to the last page, page , they turn  page and are at the correct page. Return .
-
+16 24
 Function Description
 
-Complete the pageCount function in the editor below.
+Complete the miniMaxSum function in the editor below.
 
-pageCount has the following parameter(s):
+miniMaxSum has the following parameter(s):
 
-int n: the number of pages in the book
-int p: the page number to turn to
-Returns
+arr: an array of  integers
+Print
 
-int: the minimum number of pages to turn
+Print two space-separated integers on one line: the minimum sum and the maximum sum of  of  elements.
+
 Input Format
 
-The first line contains an integer , the number of pages in the book.
-The second line contains an integer, , the page to turn to.
+A single line of five space-separated integers.
 
 Constraints
 
-Sample Input 0
 
-6
-2
-Sample Output 0
+Output Format
 
-1
-Explanation 0
+Print two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. (The output can be greater than a 32 bit integer.)
 
-If the student starts turning from page , they only need to turn  page
+Sample Input
 
-If a student starts turning from page , they need to turn  pages
+1 2 3 4 5
+Sample Output
 
-Return the minimum value, .
+10 14
+Explanation
 
-Sample Input 1
+The numbers are , , , , and . Calculate the following sums using four of the five integers:
 
-5
-4
-Sample Output 1
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Hints: Beware of integer overflow! Use 64-bit Integer.Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 
-0
-Explanation 1
+Example
 
-If the student starts turning from page , they need to turn  pages
+The minimum sum is  and the maximum sum is . The function prints
 
-If they start turning from page , they do not need to turn any pages
+16 24
+Function Description
 
-Return the minimum value, .
+Complete the miniMaxSum function in the editor below.
+
+miniMaxSum has the following parameter(s):
+
+arr: an array of  integers
+Print
+
+Print two space-separated integers on one line: the minimum sum and the maximum sum of  of  elements.
+
+Input Format
+
+A single line of five space-separated integers.
+
+Constraints
+
+
+Output Format
+
+Print two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. (The output can be greater than a 32 bit integer.)
+
+Sample Input
+
+1 2 3 4 5
+Sample Output
+
+10 14
+Explanation
+
+The numbers are , , , , and . Calculate the following sums using four of the five integers:
+
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Sum everything except , the sum is .
+Hints: Beware of integer overflow! Use 64-bit Integer.
